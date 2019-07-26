@@ -1,9 +1,9 @@
 pipeline {
 	agent  any
 	stages {
-		stage('clone') {
+		stage('Build') {
 			step {
-			sh 'git clone https://github.com/sivakcdev/shiva.git'
+			sh 'mvn clean package'
 			}
 		}
 		
