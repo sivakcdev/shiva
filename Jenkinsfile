@@ -1,15 +1,11 @@
 pipeline {
-	agent  any
+	agent { label 'node1' }
 	stages {
-		stage('Build') {
-			steps {
-				sh 'mvn clean compile'
+			stage('Build') {
+				steps {
+					sh 'mvn clean package'
 			}
+		
 		}
-		
-		
-
-	
 	}
-
-}
+ }
